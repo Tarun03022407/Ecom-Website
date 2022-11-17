@@ -1,0 +1,12 @@
+.mainheader{
+    padding: 0 4.8rem;
+    height: 10rem;
+    /* background-color:aliceblue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.logo {
+    height: 5rem;
+  }

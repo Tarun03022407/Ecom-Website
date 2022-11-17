@@ -1,0 +1,34 @@
+.common-heading{
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+.contact-input {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 40px;
+    width: 30%;
+    margin-left: 40%;
+}
+
+input[type="submit"]{
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="submit"]:hover{
+    background-color: white;
+    border: 1px solid burlywood;
+    color: rgb(40, 73, 101);
+    transform: scale(0.9);
+}
+.textarea{
+    height: 200px;
+    border: 1px solid black;
+}
