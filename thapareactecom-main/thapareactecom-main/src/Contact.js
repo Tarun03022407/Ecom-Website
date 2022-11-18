@@ -1,37 +1,82 @@
-import { Input } from "@chakra-ui/react";
-import "./Contact.css"
+import styled from "styled-components";
 
 const Contact = () => {
-
+  const Wrapper = styled.section`
+    padding: 9rem 0 5rem 0;
+    text-align: center;
+    .container {
+      margin-top: 6rem;
+      .contact-form {
+        max-width: 50rem;
+        margin: auto;
+        .contact-inputs {
+          display: flex;
+          flex-direction: column;
+          gap: 3rem;
+          input[type="submit"] {
+            cursor: pointer;
+            transition: all 0.2s;
+            &:hover {
+              background-color: ${({ theme }) => theme.colors.white};
+              border: 1px solid ${({ theme }) => theme.colors.btn};
+              color: ${({ theme }) => theme.colors.btn};
+              transform: scale(0.9);
+            }
+          }
+        }
+      }
+    }
+  `;
 
   return (
-    <div>
-      <h2 className="common-heading" >Contact Page</h2>
+    <Wrapper>
+      <h2 className="common-heading">Contact page</h2>
 
-
-
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224611.8036088062!2d77.17898457661389!3d28.402371870422577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdc15f5a424b1%3A0xe4f50576c850e0f2!2sFaridabad%2C%20Haryana!5e0!3m2!1sen!2sin!4v1668589144369!5m2!1sen!2sin" width="100%" height="400" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-
-
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.265588856342!2d73.91455641541671!3d18.562061287384868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c147b8b3a3bf%3A0x6f7fdcc8e4d6c77e!2sPhoenix%20Marketcity%20-%20Viman%20Nagar!5e0!3m2!1sen!2sin!4v1664345115285!5m2!1sen!2sin"
+        width="100%"
+        height="400"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"></iframe>
 
       <div className="container">
         <div className="contact-form">
-          <form action="https://formspree.io/f/mpznbyel" className="contact-input" method="POST">
-            <Input  type={"text"} required autoComplete="off" name="username"  placeholder="username" />
-            <Input  type={"email"} required autoComplete="off" name="email"  placeholder="Email" />
+          <form
+            action="https://formspree.io/f/xeqdgwnq"
+            method="POST"
+            className="contact-inputs">
+            <input
+              type="text"
+              placeholder="username"
+              name="username"
+              required
+              autoComplete="off"
+            />
 
-            <textarea className="textarea" name="message" required  autoComplete="off" placeholder="Enter Your Message" ></textarea>
+            <input
+              type="email"
+              name="Email"
+              placeholder="Email"
+              autoComplete="off"
+              required
+            />
 
-            <Input type="submit" />
+            <textarea
+              name="Message"
+              cols="30"
+              rows="10"
+              required
+              autoComplete="off"
+              placeholder="Enter you message"></textarea>
+
+            <input type="submit" value="send" />
           </form>
         </div>
-
-
       </div>
-
-
-    </div>
-  )
+    </Wrapper>
+  );
 };
 
 export default Contact;

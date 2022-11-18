@@ -9,6 +9,7 @@ import Cart from "./Cart"
 import ErrorPage from "./ErrorPage";
 import { ThemeProvider } from "styled-components";
 import { ChakraProvider } from '@chakra-ui/react'
+import { GlobalStyle } from "./GlobalStyle";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 const App = () => {
@@ -42,6 +43,8 @@ const App = () => {
     <ThemeProvider theme={theme}>
 <ChakraProvider>
     <BrowserRouter>
+    <GlobalStyle />
+
  <Header />
     <Routes>
       <Route path="/"  element={<Home />} />
